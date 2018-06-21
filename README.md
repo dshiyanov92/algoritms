@@ -1,21 +1,21 @@
 Цель данной работы состоит в написании и исследовании алгоритмов сортировки на разных входных данных.
 
-[Описание сортировок, используемых в данном проекте](https://github.comdshiyanov92/algoritms/new/master?readme=1#1-%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B5%D0%BC%D1%8B%D1%85-%D0%B2-%D0%B4%D0%B0%D0%BD%D0%BD%D0%BE%D0%BC-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B5)
-* [Сортировка выбором](https://github.com/iukarpov/dshiyanov92/algoritms/master?readme=1#11-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%BE%D0%BC--selection-sort)
-* [Сортировка вставками](https://github.com/dshiyanov92/algoritms/new/master?readme=1#12-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B2%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0%D0%BC%D0%B8--insertion-sort)
-* [Сортировка Шелла](https://github.com/dshiyanov92/algoritms/new/master?readme=1#13-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%A8%D0%B5%D0%BB%D0%BB%D0%B0--shellsort)
-* [Быстрая сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#14-%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0--quicksort)
-* [Сортировка слиянием](https://github.com/dshiyanov92/algoritms/new/master?readme=1#15-%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%BB%D0%B8%D1%8F%D0%BD%D0%B8%D0%B5%D0%BC--merge-sort)
-* [Поразрядная сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#16-%D0%9F%D0%BE%D1%80%D0%B0%D0%B7%D1%80%D1%8F%D0%B4%D0%BD%D0%B0%D1%8F-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0--radixsort)
+[Описание сортировок, используемых в данном проекте](https://github.comdshiyanov92/algoritms/new/master?readme=1#1)
+* [Сортировка выбором](https://github.com/iukarpov/dshiyanov92/algoritms/master?readme=1#11)
+* [Сортировка вставками](https://github.com/dshiyanov92/algoritms/new/master?readme=1#12)
+* [Сортировка Шелла](https://github.com/dshiyanov92/algoritms/new/master?readme=1#13)
+* [Быстрая сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#14)
+* [Сортировка слиянием](https://github.com/dshiyanov92/algoritms/new/master?readme=1#15)
+* [Поразрядная сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#16)
 
-[Тестирование](https://github.com/dshiyanov92/algoritms/new/master?readme=1#2-%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
-* [Железо и система](https://github.com/dshiyanov92/algoritms/new/master?readme=1#21-%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BE-%D0%B8-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0)
-* [Тип и размер входных данных](https://github.com/dshiyanov92/algoritms/new/master?readme=1#22-%D0%A2%D0%B8%D0%BF-%D0%B8-%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80-%D0%B2%D1%85%D0%BE%D0%B4%D0%BD%D1%8B%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
+[Тестирование](https://github.com/dshiyanov92/algoritms/new/master?readme=1#2)
+* [Железо и система](https://github.com/dshiyanov92/algoritms/new/master?readme=1#21)
+* [Тип и размер входных данных](https://github.com/dshiyanov92/algoritms/new/master?readme=1#22)
 
-[Результаты](https://github.com/dshiyanov92/algoritms/new/master?readme=1#3-%D0%A0%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%D1%8B)
-* [Первая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#31-%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA)
-* [Вторая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#32-%D0%92%D1%82%D0%BE%D1%80%D0%B0%D1%8F-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA)
-* [Третья группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#33-%D0%A2%D1%80%D0%B5%D1%82%D1%8C%D1%8F-%D0%B3%D1%80%D1%83%D0%BF%D0%BF%D0%B0-%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D0%BA)
+[Результаты](https://github.com/dshiyanov92/algoritms/new/master?readme=1#3)
+* [Первая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#31)
+* [Вторая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#32)
+* [Третья группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#33)
 
 # 1. Описание сортировок, используемых в данном проекте
 ## 1.1 Сортировка выбором / Selection Sort
