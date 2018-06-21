@@ -1,21 +1,21 @@
 Цель данной работы состоит в написании и исследовании алгоритмов сортировки на разных входных данных.
 
-[Описание сортировок, используемых в данном проекте](https://github.comdshiyanov92/algoritms/new/master?readme=1#1)
-* [Сортировка выбором](https://github.com/iukarpov/dshiyanov92/algoritms/master?readme=1#11)
-* [Сортировка вставками](https://github.com/dshiyanov92/algoritms/new/master?readme=1#12)
-* [Сортировка Шелла](https://github.com/dshiyanov92/algoritms/new/master?readme=1#13)
-* [Быстрая сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#14)
-* [Сортировка слиянием](https://github.com/dshiyanov92/algoritms/new/master?readme=1#15)
-* [Поразрядная сортировка](https://github.com/dshiyanov92/algoritms/new/master?readme=1#16)
+Описание сортировок, используемых в данном проекте
+* Сортировка выбором
+* Сортировка вставками
+* Сортировка Шелла
+* Быстрая сортировка
+* Сортировка слиянием
+* Поразрядная сортировка
 
-[Тестирование](https://github.com/dshiyanov92/algoritms/new/master?readme=1#2)
-* [Железо и система](https://github.com/dshiyanov92/algoritms/new/master?readme=1#21)
-* [Тип и размер входных данных](https://github.com/dshiyanov92/algoritms/new/master?readme=1#22)
+Тестирование
+* Железо и система
+* Тип и размер входных данных
 
-[Результаты](https://github.com/dshiyanov92/algoritms/new/master?readme=1#3)
-* [Первая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#31)
-* [Вторая группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#32)
-* [Третья группа сортировок](https://github.com/dshiyanov92/algoritms/new/master?readme=1#33)
+Результаты
+* Первая группа сортировок
+* Вторая группа сортировок
+* Третья группа сортировок
 
 # 1. Описание сортировок, используемых в данном проекте
 ## 1.1 Сортировка выбором / Selection Sort
