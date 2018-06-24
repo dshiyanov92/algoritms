@@ -1,0 +1,378 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+
+
+namespace Homework_ASTD
+{
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Программа оценки работы алгоритмов.");
+            Console.WriteLine("Выберите вариант работы программы:" +
+                "\n1 - Результат на консоли(отладка)" +
+                "\n2 - Результат в файле");
+            int q;
+            while (true)
+            {
+                int b = int.Parse(Console.ReadLine());
+                if (b > 0 && b < 3)
+                {
+                    q = b;
+                    break;
+                }
+            }
+
+            Console.WriteLine("Введите длину массива:");
+            int lenght = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите максимальное значение элемента в массиве:");
+            int my_maxValue = int.Parse(Console.ReadLine());
+            switch (q)                                          // выбор режима работы 
+            {
+                case (1):
+
+                    Console.WriteLine("Выберите тип массива:");
+                    Console.WriteLine("1 Неотсортированный массив случайных значений:");
+                    Console.WriteLine("2 Частично отсортированный массив, один эл - т лишний");
+                    Console.WriteLine("3 Реверсивно отсортированный массив");
+
+                    int a;
+                    while (true)
+                    {
+                        int b = int.Parse(Console.ReadLine());
+                        if (b > 0 && b < 4)
+                        {
+                            a = b;
+                            break;
+                        }
+                    }
+
+                    int[] my_array = new int[lenght];
+                    Console.WriteLine("Неотсортированный массив");
+                    Rand_myarray(my_array, lenght, my_maxValue, a);
+                    foreach (int item in my_array) Console.Write(" " + item);
+                    Console.WriteLine();
+                    Console.WriteLine("Выберите тип сортировки:");
+                    Console.WriteLine("1 Поразрядная сортировка (RadixSort) On*k:");
+                    Console.WriteLine("2 Сортировка вставками: On2");
+                    Console.WriteLine("3 Сортировка Шелла: On Logn");
+                    Console.WriteLine("4 Сортировка выбором: Оn2");
+                    Console.WriteLine("5 Быстрая сортировка: On Logn");
+                    Console.WriteLine("6 Сортировка слиянием: On Logn");
+                    int sort;
+                    while (true)
+                    {
+                        int b = int.Parse(Console.ReadLine());
+                        if (b > 0 && b < 7)
+                        {
+                            sort = b;
+                            break;
+                        }
+                    }
+                    DateTime Start;
+                    DateTime Stop;
+                    TimeSpan Elapsed = new TimeSpan();
+                    Start = DateTime.Now;
+                    switch (sort)
+                    {
+                        case (1):
+                            RadixSort(my_array);
+                            break;
+                        case (2):
+                            InsertionSort(my_array, lenght);
+                            break;
+                        case (3):
+                            ShellSort(my_array, lenght);
+                            break;
+                        case (4):
+                            SelectionSort(my_array, lenght);
+                            break;
+                        case (5):
+                            Quicksort(my_array, 0, lenght - 1);
+                            break;
+                        case (6):
+                            my_array = Merge_Sort(my_array);
+                            break;
+
+
+                    }
+                    Stop = DateTime.Now;
+                    Elapsed = Stop.Subtract(Start);
+                    Console.WriteLine("Время выполнения = " + Convert.ToString(Elapsed.TotalMilliseconds));
+                    Console.WriteLine("Отсортированный массив:");
+                    foreach (int item in my_array) Console.Write(" " + item);
+                    Console.ReadLine();
+                    break;
+
+                case (2):                                       //автоматически с записью результата
+                    DateTime Start1;
+                    DateTime Stop1;
+                    TimeSpan Elapsed1 = new TimeSpan();
+
+                    for (int sor = 1; sor < 4; sor++)          // кол-во вариантов рандома
+                    {
+                        Console.WriteLine("вариант массива " + sor);
+                        int[] my_array5 = new int[lenght];
+                        Rand_myarray(my_array5, lenght, my_maxValue, sor);
+
+
+                        for (int ros = 1; ros <= 6; ros++)          // кол-во вариантов сортировка
+                        {
+                            int[] my_array6 = new int[lenght];
+                            Array.Copy(my_array5, my_array6, lenght);
+
+
+                            switch (ros)
+                            {
+                                case (1):
+                                    Start1 = DateTime.Now;
+                                    RadixSort(my_array6);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время Разрядная = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                                case (2):
+                                    Start1 = DateTime.Now;
+                                    InsertionSort(my_array6, lenght);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время вставка = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                                case (3):
+                                    Start1 = DateTime.Now;
+                                    ShellSort(my_array6, lenght);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время Шелл = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                                case (4):
+                                    Start1 = DateTime.Now;
+                                    SelectionSort(my_array6, lenght);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время Выбором = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                                case (5):
+                                    Start1 = DateTime.Now;
+                                    Quicksort(my_array6, 0, lenght - 1);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время Квик = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                                case (6):
+                                    Start1 = DateTime.Now;
+                                    my_array = Merge_Sort(my_array6);
+                                    Stop1 = DateTime.Now;
+                                    Elapsed1 = Stop1.Subtract(Start1);
+                                    my_array6 = null;
+                                    Console.WriteLine("Выполнения время Слияние = " + Convert.ToString(Elapsed1.TotalMilliseconds));
+
+                                    break;
+                            };
+
+                        }
+                    };
+                    Console.ReadLine();
+                    break;
+
+
+
+            }
+
+        }
+
+        static void Rand_myarray(int[] my_array, int length, int my_maxValue, int a) //заполнение массива случайными числами
+        {
+            switch (a)
+            {
+                case 1:                         // неотсортированный массив случайных значений
+                    Random rand = new Random();
+                    for (int y = 0; y < length; y++)
+                    {
+                        my_array[y] = rand.Next(1, my_maxValue);
+                      };
+                    break;
+                case 2:                         // частично отсортированный массив(Один лишний элемент)
+
+                    for (int y = 0; y < length; y++)
+                    {
+                        my_array[y] = y;
+                    };
+                    Random rand4 = new Random();
+                    my_array[rand4.Next(0, length)] = 100;
+                    //foreach (int item in my_array) Console.Write(" " + item);
+                    break;
+                case 3:                                 //обратно отсортированный массив
+
+                    for (int y = length - 1; y >= 0; y--)
+                    {
+                        my_array[y] =(int) Math.Sqrt(Math.Pow(y - (length - 1), 2));
+                    };
+                    break;
+                case 4:                                 // 
+
+                    break;
+            }
+
+
+
+
+        }
+
+        static void ShellSort(int[] my_array, int length)  // сортировка Шелла+
+        {
+            int h = 0;
+            for (h = 1; h <= length / 9; h = 3 * h + 1)
+                ;
+
+            for (; h > 0; h /= 3)
+            {
+                for (int i = h; i < length; ++i)
+                {
+                    int j = i;
+                    int tmp = my_array[i];
+                    while (j >= h && tmp < my_array[j - h])
+                    {
+                        int tmp1 = my_array[j];
+                        my_array[j] = my_array[j - h];
+                        my_array[j - h] = tmp1; ;
+                        j -= h;
+                    }
+                    my_array[j] = tmp;
+                }
+            }
+
+
+        }
+
+        static void SelectionSort(int[] my_array, int length)// сортировка выбором+
+        {
+            for (int i = 0; i < length - 1; i++)
+            {
+                int min_i = i;
+                for (int j = i + 1; j < length; j++)
+                {
+                    if (my_array[j] < my_array[min_i])
+                    {
+                        min_i = j;
+                    }
+                }
+                if (min_i != i)
+                {
+                    int tmp = my_array[i];
+                    my_array[i] = my_array[min_i];
+                    my_array[min_i] = tmp; ;
+                }
+            }
+
+
+        }
+
+        static void InsertionSort(int[] my_array, int lenght)//сортировка вставками
+        {
+            for (int i = 1; i < lenght; i++)
+            {
+                int j;
+                int buf = my_array[i];
+                for (j = i - 1; j >= 0; j--)
+                {
+                    if (my_array[j] < buf)
+                        break;
+
+                    my_array[j + 1] = my_array[j];
+                }
+                my_array[j + 1] = buf;
+            }
+        }
+
+      
+
+        static Int32[] Merge_Sort(Int32[] massive)	// сортировка слиянием
+        {
+            if (massive.Length == 1)
+                return massive;
+            Int32 mid_point = massive.Length / 2;
+            return Merge(Merge_Sort(massive.Take(mid_point).ToArray()), Merge_Sort(massive.Skip(mid_point).ToArray()));
+        }
+
+        static Int32[] Merge(Int32[] mass1, Int32[] mass2)
+        {
+            Int32 a = 0, b = 0;
+            Int32[] merged = new int[mass1.Length + mass2.Length];
+            for (Int32 i = 0; i < mass1.Length + mass2.Length; i++)
+            {
+                if (b < mass2.Length && a < mass1.Length)
+                    if (mass1[a] > mass2[b])
+                        merged[i] = mass2[b++];
+                    else //if int go for
+                        merged[i] = mass1[a++];
+                else
+                    if (b < mass2.Length)
+                    merged[i] = mass2[b++];
+                else
+                    merged[i] = mass1[a++];
+            }
+            return merged;
+        }
+
+        static void RadixSort(int[] old) //Поразрядная сортировка
+        {
+            int i, j;
+            int[] tmp = new int[old.Length];
+            for (int shift = 31; shift > -1; --shift)
+            {
+                j = 0;
+                for (i = 0; i < old.Length; ++i)
+                {
+                    bool move = (old[i] << shift) >= 0;
+                    if (shift == 0 ? !move : move)  
+                        old[i - j] = old[i];
+                    else                            
+                        tmp[j++] = old[i];
+                }
+                Array.Copy(tmp, 0, old, old.Length - j, j);
+            }
+        }
+
+        static void Quicksort(int[] array, int first, int last)
+        {
+            int p = array[(last - first) / 2 + first];
+            int temp;
+            int i = first, j = last;
+            while (i <= j)
+            {
+                while (array[i] < p && i <= last) ++i;
+                while (array[j] > p && j >= first) --j;
+                if (i <= j)
+                {
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                    ++i; --j;
+                }
+            }
+            if (j > first) Quicksort(array, first, j);
+            if (i < last) Quicksort(array, i, last);
+        }// Быстрая сортировка
+
+
+    }
+}
