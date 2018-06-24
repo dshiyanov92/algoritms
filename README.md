@@ -13,9 +13,9 @@
 * Тип и размер входных данных
 
 Результаты
-* Первая группа сортировок
-* Вторая группа сортировок
-* Третья группа сортировок
+* Массив случайных чисел
+* Обратно отсортированный массиы
+* Частично отсортированный массив
 
 # 1. Описание сортировок, используемых в данном проекте
 ## 1.1 Сортировка выбором / Selection Sort
@@ -46,27 +46,15 @@
 ## 3.1 Первая группа сортировок
 ### Массив случайных чисел
 
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/fgm8AJ/Random_Table.jpg" alt="Random_Table" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/huzZjd/Random1.jpg" alt="Random1" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/bFL74d/Random2.jpg" alt="Random2" border="0"></a>
-
 Как мы видим,на небольших объемах данных алгоритмы Quicksort и Shellsort серьезно ушли вперед. Однако, по мере увеличения входных данных возрастает скорость работы Radixsort.
 
 ## 3.2 Вторая группа сортировок
 ### Полностью отсортированный по возрастанию массив
 
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/iFGVPd/Best_Table.jpg" alt="Best_Table" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/d9g3cy/Best1.jpg" alt="Best1" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/kyPOcy/Best2.jpg" alt="Best2" border="0"></a>
-
 Очевидно, что найлучший результат покажет Insertion sort, однако Quicksort и Shellsort также хорошо работают с уже отсортированными данными.
 
 ## 3.3 Третья группа сортировок
 ### Частично отсортированный массив
-
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/f39jjd/Average_Table.jpg" alt="Average_Table" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/nbP0Pd/Average1.jpg" alt="Average1" border="0"></a>
-<a href="https://imgbb.com/"><img src="https://image.ibb.co/jd9Zjd/Average2.jpg" alt="Average2" border="0"></a>
 
 Shellsort и Quicksort прекрасно реагирует на частично отсортированные последовательности, однако Shellsort, имеет большую сложность (при n = 10e8). При полностью отсортированных данных, Shellsort все равно вынужден сделать все проходы, пусть даже и не переставляя ни одного элемента. Поэтому при больших объемах дынных результат ухудшится.
 
